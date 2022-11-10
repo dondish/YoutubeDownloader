@@ -130,7 +130,7 @@ namespace YoutubeDownloader
             string dest = data[1];
             string videourl = data[2];
             string arg = String.Format("-f best[ext={0}]/(bestvideo+bestaudio)/best -o \"{1}.%(ext)s\" {2}", encoding, dest, videourl);
-            ProcessStartInfo startInfo = new ProcessStartInfo("youtube-dl.exe", arg);
+            ProcessStartInfo startInfo = new ProcessStartInfo("youtube_dl.exe", arg);
             startInfo.UseShellExecute = false;
             startInfo.CreateNoWindow = true;
             startInfo.RedirectStandardOutput = true;
